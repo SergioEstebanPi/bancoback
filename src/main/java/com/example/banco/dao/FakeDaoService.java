@@ -16,8 +16,10 @@ public class FakeDaoService implements ClientDao {
 
 	@Override
 	public int insertClient(UUID id, Client client) {
+		/*
 		DB.add(new Client(id, client.getIdentification(), client.getFirstname(), client.getLastname(),
 				client.getBirthdate()));
+				*/
 		return 1;
 	}
 
@@ -28,7 +30,8 @@ public class FakeDaoService implements ClientDao {
 
 	@Override
 	public Optional<Client> selectClientById(UUID id) {
-		return DB.stream().filter(client -> client.getId().equals(id)).findFirst();
+		//return DB.stream().filter(client -> client.getId().equals(id)).findFirst();
+		return null;
 	}
 
 	@Override
@@ -46,8 +49,10 @@ public class FakeDaoService implements ClientDao {
 		return selectClientById(id).map(p -> {
 			int index = DB.indexOf(p);
 			if (index > 0) {
+				/*
 				DB.set(index, new Client(id, client.getIdentification(), client.getFirstname(), client.getLastname(),
 						client.getBirthdate()));
+						*/
 				return 1;
 			}
 			return 0;
