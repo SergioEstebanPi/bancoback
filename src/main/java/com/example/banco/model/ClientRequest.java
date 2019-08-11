@@ -1,21 +1,27 @@
 package com.example.banco.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+public class ClientRequest {
+	private String identification;
+	private String firstname;
+	private String lastname;
+	private String birthdate;
 
-public class ClientDTO {
-	@JsonProperty
-	private final String identification;
-	@JsonProperty
-	private final String firstname;
-	@JsonProperty
-	private final String lastname;
-	@JsonProperty
-	private final String birthdate;
+	public ClientRequest() {
+	}
 
-	public ClientDTO(String identification, String firstname, String lastname, String birthdate) {
+	public void setIdentification(String identification) {
 		this.identification = identification;
+	}
+
+	public void setFirstname(String firstname) {
 		this.firstname = firstname;
+	}
+
+	public void setLastname(String lastname) {
 		this.lastname = lastname;
+	}
+
+	public void setBirthdate(String birthdate) {
 		this.birthdate = birthdate;
 	}
 

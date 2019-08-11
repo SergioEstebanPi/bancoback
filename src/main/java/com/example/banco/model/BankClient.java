@@ -6,7 +6,7 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 
-public class Client {
+public class BankClient {
 	private Map<String, Object> properties = new HashMap<String, Object>();
 
 	@JsonAnyGetter
